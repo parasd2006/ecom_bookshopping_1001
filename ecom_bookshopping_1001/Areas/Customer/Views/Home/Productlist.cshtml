@@ -1,0 +1,75 @@
+﻿@model IEnumerable<ecom_bookshopping_1001.Models.Product>
+
+<div class="row">
+
+    @foreach (var product in Model)
+    {
+        <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+
+            <div class="book-card">
+
+                <div class="book-image-wrapper">
+
+                    <img src="@product.Imageurl"
+                         class="book-image"
+                         alt="@product.Title" />
+
+                    <span class="book-badge">
+                        BOOK
+                    </span>
+
+                </div>
+
+                <div class="book-info">
+
+                    <h5 class="book-title">
+                        @product.Title
+                    </h5>
+
+                    <p class="book-author">
+                        <span>by</span> @product.Author
+                    </p>
+
+                    <div class="book-divider"></div>
+
+                    <div class="price-section">
+
+                        <span class="price-label">
+                            List Price
+                        </span>
+
+                        <span class="old-price">
+                            $@product.ListPrice.ToString("0.00")
+                        </span>
+
+                    </div>
+
+                    <div class="price-section">
+
+                        <span class="price-label sale-label">
+                            As low as
+                        </span>
+
+                        <span class="current-price">
+                            $@product.Price100.ToString("0.00")
+                        </span>
+
+                    </div>
+
+                    <a asp-action="Details"
+                       asp-route-id="@product.Id"
+                       class="book-details-btn">
+
+                        View Details
+                        <span>→</span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    }
+
+</div>

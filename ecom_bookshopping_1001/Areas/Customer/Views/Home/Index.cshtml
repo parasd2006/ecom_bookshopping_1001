@@ -1,0 +1,42 @@
+﻿
+<div class="search-section">
+
+    <form id="searchForm">
+
+        <div class="search-bar">
+
+            <div class="search-filter">
+                <label for="searchType">Search By</label>
+
+                <select id="searchType" name="searchType">
+                    <option value="all">All</option>
+                    <option value="title">Title</option>
+                    <option value="author">Author</option>
+                </select>
+            </div>
+
+           
+            <div class="search-input">
+                <span class="search-icon">🔍</span>
+
+                <input type="text"
+                       id="searchText"
+                       name="searchText"
+                       placeholder="Search books, authors and more..." />
+            </div>
+
+            
+            <button type="submit" class="search-btn">
+                Search
+            </button>
+
+        </div>
+
+    </form>
+
+</div>
+
+
+<div id="productList">
+    <partial name="Productlist" model="Model" />
+</div>

@@ -1,0 +1,552 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+```css
+/* =========================================
+   PROFESSIONAL BOOK CARD
+   ========================================= */
+.book-card {
+    background: #ffffff;
+    border: 1px solid #e8e8e8;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.book-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    border-color: #d5d5d5;
+}
+
+
+/* =========================================
+   BOOK IMAGE
+   ========================================= */
+
+.book-image-wrapper {
+    height: 300px;
+    background: #f7f7f7;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.book-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 15px;
+    transition: transform 0.4s ease;
+}
+
+.book-card:hover .book-image {
+    transform: scale(1.05);
+}
+
+
+/* BOOK BADGE */
+
+.book-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #008cba;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 5px 9px;
+    border-radius: 5px;
+}
+
+
+/* =========================================
+   BOOK INFORMATION
+   ========================================= */
+
+.book-info {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.book-title {
+    color: #2c3e50;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 7px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.book-author {
+    color: #008cba;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+    .book-author span {
+        color: #777;
+        font-weight: 400;
+    }
+
+.book-author {
+    font-weight: 600;
+}
+
+
+/* =========================================
+   DIVIDER
+   ========================================= */
+
+.book-divider {
+    height: 1px;
+    background: #eeeeee;
+    margin: 3px 0 12px 0;
+}
+
+
+/* =========================================
+   PRICE
+   ========================================= */
+
+.price-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 7px;
+}
+
+.price-label {
+    color: #777;
+    font-size: 13px;
+}
+
+.old-price {
+    color: #888;
+    font-size: 14px;
+    text-decoration: line-through;
+}
+
+.sale-label {
+    color: #555;
+    font-weight: 600;
+}
+
+.current-price {
+    color: #b12704;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   DETAILS BUTTON
+   ========================================= */
+
+.book-details-btn {
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #008cba;
+    color: #ffffff !important;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 15px;
+    border-radius: 7px;
+    transition: all 0.3s ease;
+}
+
+    .book-details-btn:hover {
+        background: #006f94;
+        color: #ffffff !important;
+        text-decoration: none;
+    }
+
+    .book-details-btn span {
+        font-size: 18px;
+        transition: transform 0.3s ease;
+    }
+
+    .book-details-btn:hover span {
+        transform: translateX(4px);
+    }
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .book-image-wrapper {
+        height: 260px;
+    }
+
+    .book-title {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .book-image-wrapper {
+        height: 280px;
+    }
+}
+
+/* =========================================
+   BOOK SEARCH BAR
+   ========================================= */
+
+.book-search-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 25px 15px 30px;
+}
+
+.book-search-box {
+    width: 70%;
+    max-width: 750px;
+    display: flex;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+    .book-search-box:focus-within {
+        border-color: #008cba;
+        box-shadow: 0 5px 20px rgba(0, 140, 186, 0.18);
+    }
+
+
+/* Search Input */
+
+.book-search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 14px 18px;
+    font-size: 15px;
+    color: #2c3e50;
+    background: #ffffff;
+}
+
+    .book-search-input::placeholder {
+        color: #999999;
+    }
+
+
+/* Search Button */
+
+.book-search-btn {
+    border: none;
+    background: #008cba;
+    color: white;
+    padding: 0 25px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+    .book-search-btn:hover {
+        background: #006f94;
+    }
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .book-search-box {
+        width: 90%;
+    }
+
+    .book-search-input {
+        font-size: 14px;
+    }
+
+    .book-search-btn {
+        padding: 0 18px;
+    }
+}
+/* ================================
+   PROFESSIONAL SEARCH BAR
+   ================================ */
+
+.search-section {
+    width: 100%;
+    padding: 30px 0;
+}
+
+.search-bar {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #e1e5eb;
+    border-radius: 18px;
+    padding: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+    /* Hover */
+    .search-bar:hover {
+        box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+    }
+
+
+/* ================================
+   SEARCH FILTER
+   ================================ */
+
+.search-filter {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 0 20px;
+    height: 48px;
+    border-right: 1px solid #e2e6eb;
+    white-space: nowrap;
+}
+
+    .search-filter label {
+        font-size: 15px;
+        font-weight: 600;
+        color: #172337;
+    }
+
+    .search-filter select {
+        border: none;
+        outline: none;
+        background: transparent;
+        font-size: 15px;
+        font-weight: 600;
+        color: #172337;
+        cursor: pointer;
+        min-width: 70px;
+    }
+
+        .search-filter select:focus {
+            outline: none;
+        }
+
+
+/* ================================
+   SEARCH INPUT
+   ================================ */
+
+.search-input {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+    background: #f7f9fc;
+    border-radius: 12px;
+    height: 48px;
+    padding: 0 16px;
+    transition: all 0.25s ease;
+}
+
+    .search-input:focus-within {
+        background: #ffffff;
+        box-shadow: inset 0 0 0 2px #2874f0;
+    }
+
+.search-icon {
+    font-size: 17px;
+    margin-right: 10px;
+    opacity: 0.55;
+}
+
+.search-input input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 15px;
+    color: #172337;
+}
+
+    .search-input input::placeholder {
+        color: #8a94a6;
+    }
+
+
+/* ================================
+   SEARCH BUTTON
+   ================================ */
+
+.search-btn {
+    height: 48px;
+    padding: 0 28px;
+    margin-left: 8px;
+    border: none;
+    border-radius: 12px;
+    background: #2874f0;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+    .search-btn:hover {
+        background: #1f63d1;
+        transform: translateY(-1px);
+        box-shadow: 0 5px 12px rgba(40, 116, 240, 0.3);
+    }
+
+    .search-btn:active {
+        transform: translateY(0);
+    }
+
+
+/* ================================
+   RESPONSIVE
+   ================================ */
+
+@media (max-width: 768px) {
+
+    .search-bar {
+        width: 95%;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    .search-filter {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e2e6eb;
+        margin-bottom: 8px;
+        justify-content: flex-start;
+    }
+
+    .search-input {
+        margin-left: 0;
+        flex: 1;
+    }
+
+    .search-btn {
+        padding: 0 20px;
+    }
+}
+/* ================================
+   SEARCH FILTER
+   ================================ */
+
+.search-filter {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    height: 52px;
+    padding: 0 18px;
+    border-right: 1px solid #e1e5eb;
+    white-space: nowrap;
+}
+
+    .search-filter label {
+        font-size: 15px;
+        font-weight: 600;
+        color: #172337;
+    }
+
+
+    /* Dropdown */
+    .search-filter select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        min-width: 120px;
+        height: 42px;
+        padding: 0 38px 0 14px;
+        border: 1px solid #d9dee7;
+        border-radius: 10px;
+        background-color: #f8f9fc;
+        color: #172337;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        outline: none;
+        /* Custom arrow */
+        background-image: linear-gradient(45deg, transparent 50%, #172337 50%), linear-gradient(135deg, #172337 50%, transparent 50%);
+        background-position: calc(100% - 17px) 17px, calc(100% - 11px) 17px;
+        background-size: 6px 6px, 6px 6px;
+        background-repeat: no-repeat;
+        transition: all 0.2s ease;
+    }
+
+
+        /* Hover */
+        .search-filter select:hover {
+            border-color: #2874f0;
+            background-color: #ffffff;
+        }
+
+
+        /* Focus */
+        .search-filter select:focus {
+            border-color: #2874f0;
+            background-color: #ffffff;
+            box-shadow: 0 0 0 3px rgba(40, 116, 240, 0.12);
+        }
+
+
+        /* Dropdown options */
+        .search-filter select option {
+            background: #ffffff;
+            color: #172337;
+            font-size: 15px;
+            padding: 10px;
+        }
